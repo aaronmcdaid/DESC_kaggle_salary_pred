@@ -1,0 +1,38 @@
+PROJECT PLAN: DESC KAGGLE SALARY PREDICTION
+-----------------------------------------------------------------------------------------------------
+
+Week1 (Sep 9th - Sep 16th):
+  Data Wrangling
+  - Standardise "Title" column: try to identify "generic" positions and remove additional information
+    such as technical skills, the location of the job, whether it is fulltime/part time. All of this
+    information can be useful features, but should not be in the Title column.
+  - Clean up "Source" column: e.g. just keep website company name, e.g. remove "www." and ".com" etc)
+    This might be a useful feature, possibly some job sites only advertise senior/higher paid  jobs
+  - "Contract Type" : can probably fill in missing values from this based on the "ContractTime"
+    feature
+
+  Feature Engineering
+  - Extract new features
+  - "Title": this feature lists a lot of technical skills (java, .NET etc) which can be extracted.
+    It can also be used to gauge the seniority of the position advertised, the contract type,
+    location etc...
+  - "Full Description" : this also contains a lot of useful features on technical skills, seniority,
+    and probably a lot more!
+  - "LocationNormalized" : The location of the job could be related to the salary offered, e.g. jobs
+    in London probably pay more than jobs in Northern Scotland. The locations could be grouped into
+    a new "Region" feature or "IsLondon" feature for examples
+
+Week1 OUTPUT: 1 clean dataset (.csv) with plenty of new features
+
+------------------------------------------------------------------------------------------------------
+
+Week2 (Sep 16th - Sep 23rd):
+  Modelling
+  - Put the clean dataset through different ML models and try to identify what models might
+    give the best results
+  - Provide updates to the group on what has/hasn't worked
+  - NOTE: Do not tune your models based on the "test" dataset. Tune should be carried out on the
+    training dataset by using Cross-Validation. The "test" dataset should only be used to test
+    the accuracy of your model after you have done all of your tuning.
+
+  Week2 OUTPUT: A model (or ensemble of models) with strong accuracy scores
